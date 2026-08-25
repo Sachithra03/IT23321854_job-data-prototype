@@ -2,9 +2,9 @@
 
 ## Project Overview
 
-**Registration Number:** IT23321854
-**Research Component:** Skill Relationship / Technology Stack Analysis
-**Data Source:** TopJobs
+* **Registration Number:** IT23321854
+* **Research Component:** Skill Relationship / Technology Stack Analysis
+* **Data Source:** TopJobs
 
 This prototype establishes a data collection and preprocessing pipeline for IT job advertisements collected from TopJobs. The collected job advertisement data is first stored in a raw CSV format and then processed into a cleaned and standardized schema.
 
@@ -16,17 +16,17 @@ This project is developed using Python and uses web scraping, OCR, and data proc
 
 ### Web Scraping
 
-• `requests` for fetching web pages and resources
-• `beautifulsoup4` for parsing HTML content
+* `requests` for fetching web pages and resources.
+* `beautifulsoup4` for parsing HTML content.
 
 ### Optical Character Recognition
 
-• `pytesseract` for extracting text from advertisement images
-• `Pillow` for loading and processing images
+* `pytesseract` for extracting text from advertisement images.
+* `Pillow` for loading and processing images.
 
 ### Data Processing
 
-• `pandas` for data cleaning, deduplication, transformation, and schema formatting
+* `pandas` for data cleaning, deduplication, transformation, and schema formatting.
 
 ## Project Structure
 
@@ -52,11 +52,13 @@ IT23321854_job_data_prototype/
 
 ### 1. Install Tesseract OCR
 
-Tesseract OCR must be installed on the operating system because TopJobs job advertisements may contain information in image format.
+Tesseract OCR must be installed on your operating system because TopJobs job advertisements may contain important information in image format.
 
-After installation, verify that Tesseract is available from the terminal.
+After installation, verify that Tesseract is available from your terminal.
 
 ### 2. Create a Python Virtual Environment
+
+Create the virtual environment:
 
 ```bash
 python3 -m venv .venv
@@ -70,7 +72,7 @@ source .venv/bin/activate
 
 ### 3. Install Python Dependencies
 
-Install the required libraries using:
+Install the required Python libraries:
 
 ```bash
 pip install -r requirements.txt
@@ -84,7 +86,7 @@ Execute the TopJobs data collector:
 python scraper/topjobs_scraper.py
 ```
 
-The scraper collects the available IT job advertisement information and stores the raw results in CSV format.
+The scraper collects available IT job advertisement information and stores the raw results in CSV format.
 
 ### 5. Run the Data Cleaner
 
@@ -100,23 +102,32 @@ The cleaner processes the raw dataset by removing duplicates, handling missing v
 
 ```text
 TopJobs
-   ↓
+   │
+   ▼
 Web Scraper
-   ↓
+   │
+   ▼
 Job Advertisement Images
-   ↓
+   │
+   ▼
 OCR using Tesseract
-   ↓
+   │
+   ▼
 Raw CSV Dataset
-   ↓
+   │
+   ▼
 Data Cleaning
-   ↓
+   │
+   ▼
 Standardized CSV Dataset
-   ↓
-Future Skill Extraction
-   ↓
+   │
+   ▼
+Future Semantic Skill Extraction
+   │
+   ▼
 Skill Relationship Analysis
-   ↓
+   │
+   ▼
 Technology Stack Analysis
 ```
 
@@ -124,7 +135,7 @@ Technology Stack Analysis
 
 ### Image Based Job Advertisements
 
-A major challenge identified during prototype development was that some TopJobs job advertisements use images to display important job information rather than providing all information as standard HTML text.
+A major challenge identified during prototype development was that some TopJobs advertisements use images to display important job information rather than standard HTML text.
 
 Traditional HTML parsing alone is therefore insufficient for extracting the complete advertisement content.
 
@@ -146,26 +157,26 @@ The cleaner can be extended with regular expressions and additional text process
 
 Future improvements include:
 
-• Separating job descriptions and requirements
-• Extracting technical skills and technologies
-• Normalizing different names for the same technology
-• Improving OCR text cleaning
-• Removing irrelevant OCR artifacts
-• Detecting experience requirements
-• Extracting education requirements
-• Building skill co occurrence matrices
-• Identifying relationships between skills
-• Performing technology stack analysis
-• Preparing the dataset for future semantic analysis
+* Separating job descriptions and requirements.
+* Extracting technical skills and technologies.
+* Normalizing different names for the same technology.
+* Improving OCR text cleaning.
+* Removing irrelevant OCR artifacts.
+* Detecting experience requirements.
+* Detecting educational requirements.
+* Building skill co occurrence matrices.
+* Identifying relationships between skills.
+* Performing technology stack analysis.
+* Preparing the dataset for future semantic analysis.
 
 ## Research Contribution
 
-This prototype provides the initial data pipeline required for the **Skill Relationship / Technology Stack Analysis** component of the research project.
+This prototype provides the initial data collection and preprocessing pipeline required for the **Skill Relationship / Technology Stack Analysis** component of the research project.
 
 The resulting structured dataset can be used in later stages to identify commonly requested technologies, analyze relationships between technical skills, and investigate technology stack patterns within IT job advertisements.
 
 ## Author
 
-**Registration Number:** IT23321854
-**Research Component:** Skill Relationship / Technology Stack Analysis
-**Data Source:** TopJobs
+* **Registration Number:** IT23321854
+* **Research Component:** Skill Relationship / Technology Stack Analysis
+* **Data Source:** TopJobs
